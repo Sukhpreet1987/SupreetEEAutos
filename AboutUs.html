@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+
+	<meta charset="UTF-8"/>
+	<meta name = "viewport" content="width=device-width, initial-scale=1">
+	<title>EEA Autos</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<!-- to be used when linking Jquery to cdn "google library"-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- Linking Javascript file-->
+	<script src ="js/bootstrap.js"></script>
+	<script type="text/javascript" src="custom.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+</head>
+<body>
+
+<!--Navigation-->
+<nav class = "navbar navbar-default" id="nv">
+<div class="container">
+	<div class ="navbar-header">
+		<a href="#" class="navbar-brand"><img src = "Images/logo.png" alt="logo" class="img-responsive img-rounded" ></a> 
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sandwich">
+			<span class ="icon-bar"></span>
+			<span class ="icon-bar"></span>
+			<span class ="icon-bar"></span>
+		</button>
+	</div>
+	<br>
+	<div class ="collapse navbar-collapse" id ="sandwich">
+	<ul class="nav navbar-nav">	
+		<li><a href="index.html"><span class = "glyphicon glyphicon-home"></span>HOME</a></li>
+		<li><a href="ABOUTUS.html">ABOUT US</a></li>
+		<li><a href="STOCKSEARCH.html">STOCK SEARCH</a></li>
+		<li><a href="CONTACTUS.html">CONTACT US</a></li>
+	</ul>
+	<ul class ="nav navbar-nav navbar-right">
+		<li><a href="#"><span class ="glyphicon glyphicon-earphone"></span> <b>Dublin Office: 012345678</b> 	</a></li>
+	</ul>
+	</div>
+</div>
+</nav>
+<!--End of navigation-->
+
+<!--Main image-->
+<div class ="container">
+	<div class ="row">   <!--Created a <div> row with a image over 12 columns -->
+		<div class = "col-sm-12">
+		<img src = "Images/mainlogo2.png" alt="mainlogo2" class="img-responsive img-thumbnail" ></a> 
+		</div>
+	</div>
+<!--Main image placement done-->
+
+<div class ="row">   <!--Created a <div> row with content written over 12 columns -->
+	<div class ="col-sm-12">
+	<h2><b>About Us</b></h2>
+	</div>
+</div>
+<div class ="row jumbotron">
+	<div class="col-sm-12">
+	<h2><b>Welcome to EEA Autos</b></h2>
+	<p>With an extensive range of second hand cars featuring all makes and models, AIG Autos Dublin & Belfast can provide the right car at the right price.
+With so much choice on used cars why go anywhere else? Get the best prices and widest choice in Dublin & Belfast, contact us today!
+We offer a wide range of services including Used Vehicle Sales, Servicing, Body shop repairs, Warranty, Cars for cash and Vehicle transport.</p>
+	</div>
+</div>
+
+</div>
+
+<!--image slider-->
+
+<div id = "container">
+	<img class="slides" src="Images/audia61.jpg"/>
+	<img class="slides" src="Images/bmw5.jpg"/>
+	<img class="slides" src="Images/merc.jpg"/>
+	<img class="slides" src="Images/discovery.jpg"/>
+	<img class="slides" src="Images/jaguar.jpg"/>
+	<img class="slides" src="Images/volvo.jpg"/>
+	<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094; <!--On clcik of plusIndex button; it will call function(index)in javascript-->
+	</button>
+	<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;
+	</button>
+	
+</div>
+
+<!--Footer-->
+<div class= "container"> 
+<nav class = "nav navbar-default" id="nv">
+	<div class = "row">  <!--created another Nav bar in the footer to show similarity between header and footer-->
+		<div class="col-sm-4">
+		<nav class = "navbar ">
+			<ul class="nav navbar-nav">		
+				<li><a href="index.html"><span class = "glyphicon glyphicon-home"></span>HOME</a></li>
+				<li><a href="ABOUTUS.html">ABOUT US</a></li><br>
+				<li><a href="STOCKSEARCH.html">STOCK SEARCH</a></li>
+				<li><a href="CONTACTUS.html">CONTACT US</a></li>
+			</ul>
+		</nav>
+		</div>
+	
+	<!--Social media icons-->
+	<section id ="social">
+		<div class ="col-sm-4">
+			<ul class ="nav navbar-nav	">
+				<li><a href="#" class="fa fa-facebook"> Facebook</a></li>
+				<li><a href="#" class="fa fa-twitter"> Twitter</a></li>
+				<li><a href="#" class="fa fa-google"> Google</a></li>
+			</ul>
+		</div>
+	</section>
+	<section id ="logo">
+		<div class ="col-sm-4">
+		<a href="#" class="navbar-brand"><img src = "Images/logo.png" alt="logo" class="img-responsive img-rounded" ></a>
+		</div>
+	</section>
+	</div>
+</nav><br>
+<div class = "row">
+	<div class ="col-sm-12">
+	<p id ="copy">Copyright &copy; 2017 EEA Autos.All Right Reserved.All other trademarks, product names & logos appearing on this Site are the property of the respective owner.<b>Designed By:SSareen</b></p>
+	</div>
+</div>
+</div>
+
+
+</body>
+<!--Pseudocode for Javascript for Image Slider-->
+<script>   													
+	var index = 1;												
+	
+	function plusIndex(n){                      <!---->   <!--function is called On pressing PlusIndex button where index is '1'-->
+		index = index + n;          					  <!-- adds 1 to index where index is at 1-->
+		showImage(index);								  <!-- showImage calls index at 1 in first line of script-- >
+	}
+	showImage(1)
+	
+	function showImage(n){   							  <!-- changes value of n = 2-->
+		var i;
+		var x = document.getElementsByClassName("slides");
+		if(n > x.length){index = 1};					  <!--Now n= 2; where n is not greater than x.length or less than 1 -->
+		if(n < 1){index = x.length};
+		for(i=0;i<x.length;i++)							  <!--therefore "for" loop starts-->
+			{
+				x[i].style.display = "none";
+			}
+		x[index-1].style.display = "block";  			  <!--therefore will display the image as the value keeps incrementing and displays 5 images in a loop-->
+	}
+	
+</script>
+
+</html>

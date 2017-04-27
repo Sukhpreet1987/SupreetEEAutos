@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+
+	<meta charset="UTF-8"/>
+	<meta name = "viewport" content="width=device-width, initial-scale=1">
+	<title>EEA Autos</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<!-- to be used when linking Jquery to cdn "google library"-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- Linking Javascript file-->
+	<script src ="js/bootstrap.js"></script>
+	<script type="text/javascript" src="custom.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+</head>
+<body>
+
+<!--Navigation-->
+<nav class = "navbar navbar-default" id="nv">
+<div class="container">
+	<div class ="navbar-header">
+		<a href="#" class="navbar-brand"><img src = "Images/logo.png" alt="logo" class="img-responsive img-rounded" ></a> 
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sandwich">
+			<span class ="icon-bar"></span>
+			<span class ="icon-bar"></span>
+			<span class ="icon-bar"></span>
+		</button>
+	</div>
+	<br>
+	<div class ="collapse navbar-collapse" id ="sandwich">
+	<ul class="nav navbar-nav">	
+		<li><a href="index.html"><span class = "glyphicon glyphicon-home"></span>HOME</a></li>
+		<li><a href="ABOUTUS.html">ABOUT US</a></li>
+		<li><a href="STOCKSEARCH.html">STOCK SEARCH</a></li>
+		<li><a href="CONTACTUS.html">CONTACT US</a></li>
+	</ul>
+	<ul class ="nav navbar-nav navbar-right">
+		<li><a href="#"><span class ="glyphicon glyphicon-earphone"></span> <b>Dublin Office: 012345678</b> 	</a></li>
+	</ul>
+	</div>
+</div>
+</nav>
+<!--End of navigation-->
+
+<div class="container">
+<div class ="row">   <!--Created a <div> row with content written over 12 columns -->
+	<div class ="col-sm-12">
+	<h2><b>Stock Search</b></h2>
+	</div>
+</div>
+
+<div class="row">  <!-- Stock Search Form goes here-->
+	<div class="col-sm-4">
+	<div class = "form">
+		<form = "stock" action="/action_page.php">
+		<p><b>CarMake</b></p>
+		<select name="Car Make" id ="make">
+    <option value="Any">Any</option>
+	<option value="Audi">Audi</option>
+    <option value="BMW">BMW</option>
+    <option value="Chrysler">Chrysler</option>
+    <option value="Jaguar">Jaguar</option>
+    <option value="Mercedes-Benz">Mercedes-Benz</option>
+    <option value="Porsche">Porsche</option>
+	<option value="Range Rover">Range Rover</option>
+	<option value="Volvo">Volvo</option>
+  </select>
+  <br><br>
+	
+	<p><b>Fuel</b></p>
+	<select name="Fuel" id ="fuels">
+    <option value="Any">Any</option>
+    <option value="Petrol">Petrol</option>
+	<option value="Diesel">Diesel</option>
+	</select>
+	<br><br>
+	
+	<p><b>Transmission</b></p>
+	<select name="Transmission" id = "trans">
+    <option value="Any">Any</option>
+    <option value="Manual">Manual</option>
+	<option value="Automatic">Automatic</option>
+	</select>
+	<br></br>
+	
+	<p><b>Body Type</b></p>
+	<select name="Body Type" id ="bodyt">
+    <option value="Any">Any</option>
+    <option value="Hatchback">Hatchback</option>
+	<option value="MPV">MPV</option>
+	<option value="Saloon">Saloon</option>
+	</select>
+	<br><br>
+	
+	<p><b>Year:</b></p>
+	<select name="Year" id ="yea">
+    <option value="Any">Any</option>
+    <option value="2012">2012</option>
+	<option value="2013">2013</option>
+	<option value="2014">2014</option>
+	<option value="2015">2015</option>
+	<option value="2016">2016</option>
+	</select>
+	<br><br>
+	
+	<!--A button of width 30 pixels and height 10 pixels, with the text ‘Cancel’ on it.-->
+  <button type="button" onclick="Check();">Check</button>
+  <br> <br>
+  <button id = "rest" type="button" onclick="alert('Refresh Page!)">Reset</button>
+  <p class = "sel">Your selection result display shows <span id="chosen"></span></p> <!--Javascript text-->
+	</form>
+	</div>
+	</div>
+	
+	<div class="col-sm-8"> <!--created a panel containing few images of cars in stock-->
+		<div class= "panel panel-primary">
+			<div class="panel-heading" >
+			Vehicles in Stock
+			</div>
+			<div class = "panel-body" id ="pnl">
+			<p id = "hh"><img src = "Images/audia61.jpg" alt="audia61" class="img-responsive img-rounded">
+			<b>Audi A6 S-line</b><br>
+			Transmission: Manual<br>
+			Engine size: 2.0Litre<br>
+			Fuel type: Diesel<br>
+			Year -2016<br>
+			Odometer Mileage:12,572 miles/20,232 kms<br>
+			£34,999</p><br>
+			</div>
+			<div class = "panel-body"id ="pnl">
+			<p><img src = "Images/bmw5.jpg" alt="bmw5" class="img-responsive img-rounded">
+			<b>BMW 520 M-Sport</b><br>
+			Transmission: Automatic<br>
+			Engine size: 2.0Litre<br>
+			Fuel type: Diesel<br>
+			Year -2014<br>
+			Odometer Mileage:89,000 miles/143,228 kms<br>
+			£23,900</p><br>
+			</div>
+			<div class = "panel-body" id ="pnl">
+			<p><img src = "Images/merc.jpg" alt="merc" class="img-responsive img-rounded">
+			<b>Mercedes-Benz E Class CDI BE Classic</b><br>
+			Transmission: Automatic<br>
+			Engine size: 2.1Litre<br>
+			Fuel type: Diesel<br>
+			Year -2011<br>
+			Odometer Mileage:49,089 miles/78,999 kms<br>
+			£16,500</p><br>
+			</div>
+			<div class = "panel-body" id ="pnl">
+			<p><img src = "Images/discovery.jpg" alt="discovery" class="img-responsive img-rounded">
+			<b>Land Rover Discovery XE 7 Seater</b><br>
+			Transmission: Automatic<br>
+			Engine size: 3.0Litre<br>
+			Fuel type: Diesel<br>
+			Year -2012<br>
+			Odometer Mileage:83,266 miles/134,000 kms<br>
+			£39,500</p><br>
+			</div>	
+			<div class = "panel-body" id ="pnl">
+			<p><img src = "Images/jaguar.jpg" alt="jaguar" class="img-responsive img-rounded">
+			<b>Jaguar XF 163 PS</b><br>
+			Transmission: Automatic<br>
+			Engine size: 2.2Litre<br>
+			Fuel type: Diesel<br>
+			Year -2013<br>
+			Odometer Mileage:89,053 miles/143,313 kms<br>
+			£24,950</p><br>
+			</div>	
+		</div>
+	
+	</div>
+</div>
+</div>
+
+
+<!--Footer-->
+<div class= "container"> 
+<nav class = "nav navbar-default" id="nv">
+	<div class = "row">  <!--created another Nav bar in the footer to show similarity between header and footer-->
+		<div class="col-sm-4">
+		<nav class = "navbar ">
+			<ul class="nav navbar-nav">		
+				<li><a href="index.html"><span class = "glyphicon glyphicon-home"></span>HOME</a></li>
+				<li><a href="ABOUTUS.html">ABOUT US</a></li><br>
+				<li><a href="STOCKSEARCH.html">STOCK SEARCH</a></li>
+				<li><a href="CONTACTUS.html">CONTACT US</a></li>
+			</ul>
+		</nav>
+		</div>
+	
+	<!--Social media icons-->
+	<section id ="social">
+		<div class ="col-sm-4">
+			<ul class ="nav navbar-nav	">
+				<li><a href="#" class="fa fa-facebook"> Facebook</a></li>
+				<li><a href="#" class="fa fa-twitter"> Twitter</a></li>
+				<li><a href="#" class="fa fa-google"> Google</a></li>
+			</ul>
+		</div>
+	</section>
+	<section id ="logo">
+		<div class ="col-sm-4">
+		<a href="#" class="navbar-brand"><img src = "Images/logo.png" alt="logo" class="img-responsive img-rounded" ></a>
+		</div>
+	</section>
+	</div>
+</nav><br>
+<div class = "row">
+	<div class ="col-sm-12">
+	<p id ="copy">Copyright &copy; 2017 EEA Autos.All Right Reserved.All other trademarks, product names & logos appearing on this Site are the property of the respective owner.<b>Designed By:SSareen</b></p>
+	</div>
+</div>
+</div>
+
+</body>
+<script>
+	function Check()
+	{
+	var chosen = 0.00;
+	var fueltype = document.stock.Fuel.value;
+	var Fuel;
+	for (var i in fuels)
+	{
+		if(fuels[i].selected)
+		{
+			Fuel = fuels[i].value;
+		}
+	}
+	
+	switch(fueltype)
+	{
+		case "Petrol": chosen = chosen + None;
+		break;
+		case "Diesel": chosen = chosen + 3.00;
+	}
+	
+	var sel = document.getElementByid("chosen");
+	sel.innerHTML = chosen;
+		
+}	
+
+</script>
+</html>
+
+
+</script>

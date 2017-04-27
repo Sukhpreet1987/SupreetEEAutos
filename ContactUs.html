@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+
+	<meta charset="UTF-8"/>
+	<meta name = "viewport" content="width=device-width, initial-scale=1">
+	<title>EEA Autos</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<!-- to be used when linking Jquery to cdn "google library"-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- Linking Javascript file-->
+	<script src ="js/bootstrap.js"></script>
+	<script type="text/javascript" src="custom.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+</head>
+<body>
+
+
+
+
+<!--Navigation-->
+<nav class = "navbar navbar-default" id="nv">
+<div class="container">
+	<div class ="navbar-header">
+		<a href="#" class="navbar-brand"><img src = "Images/logo.png" alt="logo" class="img-responsive img-rounded" ></a> 
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sandwich">
+			<span class ="icon-bar"></span>
+			<span class ="icon-bar"></span>
+			<span class ="icon-bar"></span>
+		</button>
+	</div>
+	<br>
+	<div class ="collapse navbar-collapse" id ="sandwich">
+	<ul class="nav navbar-nav">	
+		<li><a href="index.html"><span class = "glyphicon glyphicon-home"></span>HOME</a></li>
+		<li><a href="ABOUTUS.html">ABOUT US</a></li>
+		<li><a href="STOCKSEARCH.html">STOCK SEARCH</a></li>
+		<li><a href="CONTACTUS.html">CONTACT US</a></li>
+	</ul>
+	<ul class ="nav navbar-nav navbar-right">
+		<li><a href="#"><span class ="glyphicon glyphicon-earphone"></span> <b>Dublin Office: 012345678</b> 	</a></li>
+	</ul>
+	</div>
+</div>
+</nav>
+<!--End of navigation-->
+
+<div class="container">
+<div class ="row" id ="address">   <!--Created a <div> row with content written over 12 columns -->
+	<div class ="col-sm-12">
+	<h2><b>Contact Us</b></h2>
+	<h3>Dublin Office</h3>
+	<p>Newcastle Road<br>Dublin West<br>K78 XY95<br>Email: info@eeaautos.co.uk</p>
+	</div>
+</div>
+<div class ="row">   <!--Created another <div> row with content written over 12 columns -->
+	<div class ="col-sm-12">
+	<p><em><b>Please fill in the form below if you would like us to contact you to find a suitable car for your needs.</b></em></p>
+	</div>
+</div>
+
+<div class ="row">
+	<div class ="col-sm-7">
+	<div class = "form"> <!--Contact Form goes here-->
+	<form name ="contactform" action="/action_page.php">
+  
+  Name*<br>
+  <input type="text" name="Firstname">  
+  <br>
+  Email*<br>
+  <input type="text" name="Email"><br>
+  Telephone*<br>
+  <input type="text" name ="Telephone" id ="tel"><br><br>
+  
+  <!-- A multi-line text input control that would accept 10 lines of text with each line having maximum 50 characters.-->
+  <textarea name="message" rows="10" cols="40">Your Message* </textarea><br>
+  <!--A button of width 30 pixels and height 10 pixels, with the text ‘Cancel’ on it.-->
+  <button type="button" onclick="Submit();">Submit</button>	 <!--invokes the javascript function-->
+  <div class ="message"><br>
+  <p><b>Your message has been recieved and you will be contacted by a staff member on <span id="add">.
+  <span class ="glyphicon glyphicon-earphone"></span><br></b></p>
+  <p><b>Thank You!</b></p>
+  </div>
+  <br>
+	</form>
+	</div>
+	</div >
+	<div class ="col-sm-5">
+	<div class= "panel panel-primary">
+			<div class="panel-heading">
+			<p><b><em>Straight Roads are for fast cars .. turns are for fast drivers! <br> Oh and The one in the picture below is a rare vintage gem, Take it slow and enjoy the ride!	</em></b>
+			</div>
+			<div class = "panel-body" id = "pic">
+			<p><img src = "Images/yellowcar.png" alt="yellowcar.png" class="img-responsive img-rounded">
+			</p>
+			</div>
+			</div>
+		
+	</div>
+	</div>
+</div>
+
+<!--Footer-->
+<div class= "container"> 
+<nav class = "nav navbar-default" id="nv">
+	<div class = "row">  <!--created another Nav bar in the footer to show similarity between header and footer-->
+		<div class="col-sm-4">
+		<nav class = "navbar ">
+			<ul class="nav navbar-nav">		
+				<li><a href="index.html"><span class = "glyphicon glyphicon-home"></span>HOME</a></li>
+				<li><a href="ABOUTUS.html">ABOUT US</a></li><br>
+				<li><a href="STOCKSEARCH.html">STOCK SEARCH</a></li>
+				<li><a href="CONTACTUS.html">CONTACT US</a></li>
+			</ul>
+		</nav>
+		</div>
+	
+	<!--Social media icons-->
+	<section id ="social">
+		<div class ="col-sm-4">
+			<ul class ="nav navbar-nav	">
+				<li><a href="#" class="fa fa-facebook"> Facebook</a></li>
+				<li><a href="#" class="fa fa-twitter"> Twitter</a></li>
+				<li><a href="#" class="fa fa-google"> Google</a></li>
+			</ul>
+		</div>
+	</section>
+	<section id ="logo">
+		<div class ="col-sm-4">
+		<a href="#" class="navbar-brand"><img src = "Images/logo.png" alt="logo" class="img-responsive img-rounded" ></a>
+		</div>
+	</section>
+	</div>
+</nav><br>
+<div class = "row">
+	<div class ="col-sm-12">
+	<p id="copy">Copyright &copy; 2017 EEA Autos.All Right Reserved.All other trademarks, product names & logos appearing on this Site are the property of the respective owner.<b>Designed By:SSareen</b></p>
+	</div>
+</div>
+</div>
+
+<script><!--added another javascript where a user when clicks submit after completing the form a message displays at the bottom of the form -->
+	function Submit()
+	{
+		var tel = document.contactform.Telephone.value;
+		var contact = document.getElementById("add");
+		contact.innerHTML = tel;  <!--displays Telephone Number-->
+		
+	}
+</script>
+
+</body>
+</html>

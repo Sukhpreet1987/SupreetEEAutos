@@ -1,0 +1,158 @@
+body{
+	background-color: #fdfff8 ;
+	font-family: comic sans sherif;
+}
+h2{
+	color: #886D2E	;
+	font-size: 25px;
+}
+
+img{/**car brand icons**/
+	width: 95px;
+	margin-right: 50px;
+	display: inline;
+}
+ul{
+	background-color: ;
+	color: ;
+	margin-top: 0px;
+	margin-left: 15px;
+}
+a:link{
+	color: #408A8E;
+}
+
+div.form{
+	background-color: #F7F7F7	;
+	color: #3F729B;
+}
+/**CLASSES**/
+.navbar-brand{/** adjusts logo size in navbar**/
+	width:110px;
+	margin-bottom: 35px;	
+}
+
+p.music{
+	top: 10px;
+	position: relative;
+	float: right;
+	right: 5px;
+	font-size: 18px;
+	color: #003399;
+}
+
+.img-thumbnail{
+	width: 100%;
+	height: 250px;/**main image**/
+	margin-bottom: 5px;
+}
+
+.jumbotron{
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	font-size: 5px;
+	background-color: #grey;
+	color: #42646B;
+	
+}
+.well{
+	text-align: justify;
+	height: 100px;
+	
+}
+
+.img-rounded{
+	margin-top: px;	/**adjusts image in the 2/3 of the page**/
+	width: 260px;
+	margin-bottom:10px ;
+	position: relative;
+	float: left;
+	left: 5px;
+}
+.fa-hover {
+    opacity: 0.7;
+	}
+p.sel{ /*Javascript text on stock search page*/
+	font-size: 15px;
+	color: #221F1F;
+}
+/**ID'S**/
+#h2{
+	text-align: center;
+	color: #886D2E;
+}
+
+#social{      /**social media icons**/
+	position: relative;
+	margin-top: 15px;
+	font-size: 15px;
+}
+
+#logo{/**main logo**/
+	position: relative;
+	float: right;
+	right: 20px;	
+	margin-top: 0px;
+}
+p#copy{/**copyright text**/
+	color: #4285F4;
+	font-size: 15px;
+}
+
+#address{ /**contact page address*/
+color: #E32934;
+font-size: 18px;
+}
+#rest{
+	position: relative;
+	float: right;
+	right: 80px;
+	bottom: 45px;
+	color: red;
+}
+#container{ /** Image slider**/
+	width: 50%;
+	height: 225px;
+	border: 1px solid black;
+	margin: 0 auto;
+	position: relative;
+}
+#container> img{
+	width: 100%;
+	height:100%;
+	position: absolute;
+}
+#container>.btn{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: none;
+	border-radius: 25px;
+	top: 100px;
+	
+}
+div#pnl{/*panel */
+	color:#3F729B;
+}
+
+div#pic{/*panel contact us page*/
+	position: relative;
+	float: right;
+	right: 20px;
+}
+#container#btn1:hover{
+	box-shadow: 10px 0px 20px 0px grey;
+}
+#container#btn2:hover{
+	box-shadow: -10px 0px 20px 0px grey;
+}
+#container>#btn2{
+	position: relative;
+	float: right;
+}
+
+/*ADJUSTED CSS CODE*/
+#nv{ /* Navbar color*/  
+	background-color:#DFE3EE;
+}
