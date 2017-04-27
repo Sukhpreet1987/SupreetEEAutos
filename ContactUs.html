@@ -72,12 +72,12 @@
 	<form name ="contactform" action="/action_page.php">
   
   Name*<br>
-  <input type="text" name="Firstname">  
+  <input type="text" name="Firstname" maxlength="10" required>  
   <br>
   Email*<br>
-  <input type="text" name="Email"><br>
+  <input type="text" name="Email" maxlength="20" required><br>
   Telephone*<br>
-  <input type="text" name ="Telephone" id ="tel"><br><br>
+  <input type="text" name ="Telephone" maxlength="13" id ="tel" required><br><br>
   
   <!-- A multi-line text input control that would accept 10 lines of text with each line having maximum 50 characters.-->
   <textarea name="message" rows="10" cols="40">Your Message* </textarea><br>

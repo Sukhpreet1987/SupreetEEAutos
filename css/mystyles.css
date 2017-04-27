@@ -101,7 +101,7 @@ p#copy{/**copyright text**/
 }
 
 #address{ /**contact page address*/
-color: #E32934;
+color: #3F729B;
 font-size: 18px;
 }
 #rest{
@@ -132,8 +132,9 @@ font-size: 18px;
 	top: 100px;
 	
 }
-div#pnl{/*panel */
+div#pnl{/*panel in stock search page */
 	color:#3F729B;
+	
 }
 
 div#pic{/*panel contact us page*/

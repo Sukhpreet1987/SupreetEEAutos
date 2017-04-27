@@ -52,80 +52,21 @@
 <div class="container">
 <div class ="row">   <!--Created a <div> row with content written over 12 columns -->
 	<div class ="col-sm-12">
-	<h2><b>Stock Search</b></h2>
+	<h2><b>Vehicles In Stock </b></h2>
 	</div>
 </div>
 
 <div class="row">  <!-- Stock Search Form goes here-->
-	<div class="col-sm-4">
-	<div class = "form">
-		<form = "stock" action="/action_page.php">
-		<p><b>CarMake</b></p>
-		<select name="Car Make" id ="make">
-    <option value="Any">Any</option>
-	<option value="Audi">Audi</option>
-    <option value="BMW">BMW</option>
-    <option value="Chrysler">Chrysler</option>
-    <option value="Jaguar">Jaguar</option>
-    <option value="Mercedes-Benz">Mercedes-Benz</option>
-    <option value="Porsche">Porsche</option>
-	<option value="Range Rover">Range Rover</option>
-	<option value="Volvo">Volvo</option>
-  </select>
-  <br><br>
+	<div class ="col-sm-1">
 	
-	<p><b>Fuel</b></p>
-	<select name="Fuel" id ="fuels">
-    <option value="Any">Any</option>
-    <option value="Petrol">Petrol</option>
-	<option value="Diesel">Diesel</option>
-	</select>
-	<br><br>
-	
-	<p><b>Transmission</b></p>
-	<select name="Transmission" id = "trans">
-    <option value="Any">Any</option>
-    <option value="Manual">Manual</option>
-	<option value="Automatic">Automatic</option>
-	</select>
-	<br></br>
-	
-	<p><b>Body Type</b></p>
-	<select name="Body Type" id ="bodyt">
-    <option value="Any">Any</option>
-    <option value="Hatchback">Hatchback</option>
-	<option value="MPV">MPV</option>
-	<option value="Saloon">Saloon</option>
-	</select>
-	<br><br>
-	
-	<p><b>Year:</b></p>
-	<select name="Year" id ="yea">
-    <option value="Any">Any</option>
-    <option value="2012">2012</option>
-	<option value="2013">2013</option>
-	<option value="2014">2014</option>
-	<option value="2015">2015</option>
-	<option value="2016">2016</option>
-	</select>
-	<br><br>
-	
-	<!--A button of width 30 pixels and height 10 pixels, with the text ‘Cancel’ on it.-->
-  <button type="button" onclick="Check();">Check</button>
-  <br> <br>
-  <button id = "rest" type="button" onclick="alert('Refresh Page!)">Reset</button>
-  <p class = "sel">Your selection result display shows <span id="chosen"></span></p> <!--Javascript text-->
-	</form>
 	</div>
-	</div>
-	
-	<div class="col-sm-8"> <!--created a panel containing few images of cars in stock-->
-		<div class= "panel panel-primary">
+	<div class="col-sm-11"> <!--created a panel containing few images of cars in stock-->
+		<div class= "panel panel-primary " id = "panel">
 			<div class="panel-heading" >
 			Vehicles in Stock
 			</div>
 			<div class = "panel-body" id ="pnl">
-			<p id = "hh"><img src = "Images/audia61.jpg" alt="audia61" class="img-responsive img-rounded">
+			<p id = "hh"><img src = "Images/audia61.jpg" alt="audia61" class="img-responsive img-rounded"><br>
 			<b>Audi A6 S-line</b><br>
 			Transmission: Manual<br>
 			Engine size: 2.0Litre<br>
